@@ -99,11 +99,8 @@ public class PairStripeRelative extends Configured implements Tool {
 
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
-        //a. automatic removal of 'output' directory before job execution
         org.apache.hadoop.fs.FileSystem fs = org.apache.hadoop.fs.FileSystem.get(conf);
-        /*Check if output path (args[1])exist or not*/
         if (fs.exists(new Path(args[1]))) {
-            /*If exist delete the output path*/
             fs.delete(new Path(args[1]), true);
         }
 
