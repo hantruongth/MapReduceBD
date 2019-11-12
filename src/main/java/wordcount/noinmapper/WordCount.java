@@ -1,4 +1,4 @@
-package noinmapper;
+package wordcount.noinmapper;
 
 import java.io.IOException;
 import java.util.*;

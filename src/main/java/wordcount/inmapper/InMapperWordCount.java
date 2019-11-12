@@ -1,4 +1,4 @@
-package inmapper;
+package wordcount.inmapper;
 
 import java.io.IOException;
 import java.util.HashMap;
