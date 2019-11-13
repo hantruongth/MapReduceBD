@@ -24,7 +24,6 @@ public class PairStripeRelative extends Configured implements Tool {
     public static class PairRelativeMapper extends Mapper<LongWritable, Text, Pair, IntWritable> {
         private final static IntWritable one = new IntWritable(1);
 
-        //private Text word = new Text();
         @Override
         public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
             String[] tokens = value.toString().split("\\s+");
@@ -45,7 +44,6 @@ public class PairStripeRelative extends Configured implements Tool {
 
     public static class StripeRelativeReducer extends Reducer<Pair, IntWritable, Text, MyMapWritable> {
         private Text result = new Text();
-        //private static MyMapWritable combineMapVal = new MyMapWritable();
         private static Map<String, MyMapWritable> combineMapVal = new HashMap<String, MyMapWritable>();
         private static Map<String, Double> sumMap = new HashMap<String, Double>();
         private static List<String> keyList = new ArrayList<String>();
