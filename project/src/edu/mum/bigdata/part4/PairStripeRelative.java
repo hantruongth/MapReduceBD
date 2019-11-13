@@ -16,83 +16,90 @@ import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.Map;
 import java.util.Map.Entry;
+import java.util.TreeMap;
 
 public class PairStripeRelative extends Configured implements Tool {
 
     public static class PairRelativeMapper extends Mapper<LongWritable, Text, Pair, IntWritable> {
-        private final static IntWritable one = new IntWritable(1);
+        private Map<Pair, Integer> map = new TreeMap<>();
 
-        @Override
         public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-            String[] tokens = value.toString().split("\\s+");
-            for (int i = 0; i < tokens.length; i++) {
-                for (int j = i + 1; j < tokens.length; j++) {
-                    if (tokens[i] == tokens[j])
+            String[] words = value.toString().trim().replace(",", "").split("\\s+");
+            for (int i = 0; i < words.length; i++) {
+                String word = words[i].trim();
+                for (int j = i + 1; j < words.length; j++) {
+                    if (words[j].equals(word)) {
                         break;
-                    Pair p = new Pair(tokens[i], tokens[j]);
-                    Pair p2 = new Pair(tokens[i], "*");
-                    context.write(p, one);
-                    context.write(p2, one);
+                    } else {
+                        Pair k = new Pair(word, words[j]);
+                        if (map.containsKey(k)) {
+                            map.put(k, map.get(k) + 1);
+                        } else {
+                            map.put(k, 1);
+                        }
+                    }
                 }
             }
+        }
 
+        @Override
+        protected void cleanup(Mapper<LongWritable, Text, Pair, IntWritable>.Context context)
+                throws IOException, InterruptedException {
+            super.cleanup(context);
+            for (Map.Entry<Pair, Integer> entry : map.entrySet()) {
+                Pair pair = entry.getKey();
+                IntWritable count = new IntWritable(entry.getValue());
+                context.write(pair, count);
+            }
         }
 
     }
 
     public static class StripeRelativeReducer extends Reducer<Pair, IntWritable, Text, MyMapWritable> {
-        private Text result = new Text();
-        private static Map<String, MyMapWritable> combineMapVal = new HashMap<String, MyMapWritable>();
-        private static Map<String, Double> sumMap = new HashMap<String, Double>();
-        private static List<String> keyList = new ArrayList<String>();
+        private int sum = 0;
+        private MyMapWritable map = new MyMapWritable();
+        private String wPrev = null;
 
-        @Override
-        public void reduce(Pair key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
-            double sum = 0;
-            for (IntWritable val : values) {
-                sum += val.get();
+        public void reduce(Pair key, Iterable<IntWritable> values, Context context)
+                throws IOException, InterruptedException {
+            String w = key.getFirst().toString();
+            if (!w.equals(wPrev) && wPrev != null) {
+                for (Entry<Writable, Writable> entry : map.entrySet()) {
+                    FloatWritable value = (FloatWritable) entry.getValue();
+                    value.set(value.get() / sum);
+                }
+                context.write(new Text(wPrev), map);
+                sum = 0;
+                map.clear();
             }
-            if (key.getSecondString().equals("*"))
-                sumMap.put(key.getFirstString(), sum);
-            else
-                combineMap(key, sum);
-        }
-
-        public static void combineMap(Pair key, Double sum) {
-            if (!combineMapVal.containsKey(key.getFirstString())) {
-                keyList.add(key.getFirstString());
-                MyMapWritable mapVal = new MyMapWritable();
-                mapVal.put(new Text(key.getSecondString()), new DoubleWritable(sum));
-                combineMapVal.put(key.getFirstString(), mapVal);
-            } else {
-                MyMapWritable occurrenceMap = combineMapVal.get(key.getFirstString());
-                Text neighbor = new Text(key.getSecondString());
-                if (!occurrenceMap.containsKey(neighbor)) {
-                    occurrenceMap.put(neighbor, new DoubleWritable(sum));
-
+            for (IntWritable value : values) {
+                sum += value.get();
+                Text u = new Text(key.getSecond().toString());
+                if (map.containsKey(u)) {
+                    FloatWritable f = (FloatWritable) map.get(u);
+                    f.set(f.get() + value.get());
                 } else {
-                    DoubleWritable count = (DoubleWritable) occurrenceMap.get(neighbor);
-                    count.set(count.get() + sum);
+                    map.put(u, new FloatWritable(value.get()));
                 }
             }
+            wPrev = w;
+
         }
+
 
         @Override
-        public void cleanup(Context context) throws IOException, InterruptedException {
-            Collections.sort(keyList);
-            for (String item : keyList) {
-                MyMapWritable myMap = new MyMapWritable();
-                for (Entry<Writable, Writable> neighbor : combineMapVal.get(item).entrySet()) {
-                    DoubleWritable val = (DoubleWritable) neighbor.getValue();
-                    myMap.put(neighbor.getKey(), new DoubleWritable(val.get() / sumMap.get(item)));
-                }
-                result.set(item);
-
-                context.write(result, myMap);
+        protected void cleanup(Reducer<Pair, IntWritable, Text, MyMapWritable>.Context context)
+                throws IOException, InterruptedException {
+            super.cleanup(context);
+            for (Entry<Writable, Writable> entry : map.entrySet()) {
+                FloatWritable value = (FloatWritable) entry.getValue();
+                value.set(value.get() / sum);
             }
+            context.write(new Text(wPrev), map);
         }
+
     }
 
     public static void main(String[] args) throws Exception {
