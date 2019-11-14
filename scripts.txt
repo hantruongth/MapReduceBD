@@ -1,0 +1,42 @@
+#WordCount - Prepare data
+hadoop fs -mkdir /user/cloudera/wordcount /user/cloudera/wordcount/input /user/cloudera/wordcount/output 
+echo "Hadoop is an elephant" > file0
+echo "Hadoop is as yellow as can be" > file1
+echo "Oh what a yellow fellow is Hadoop" > file2
+hadoop fs -put file* /user/cloudera/wordcount/input
+curl -O http://cuidot.vn/data/hadoop.jar
+
+#WordCount - NoInmapper
+hadoop jar hadoop.jar edu.mum.bigdata.part1.wordcount.noinmapper.WordCount /user/cloudera/wordcount/input /user/cloudera/wordcount/output
+hadoop fs -cat /user/cloudera/wordcount/output/part-r-00000
+
+#WordCount - Inmapper
+hadoop jar hadoop.jar edu.mum.bigdata.part1.wordcount.inmapper.InMapperWordCount /user/cloudera/wordcount/input /user/cloudera/wordcount/output
+hadoop fs -cat /user/cloudera/wordcount/output/part-r-00000
+
+#AverageComputation prepare data and algorithms
+curl -O http://cuidot.vn/data/access_log
+curl -O http://cuidot.vn/data/hadoop.jar
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+
+#AverageComputation NoInmapper
+hadoop fs -mkdir /user/cloudera/averagecomputation/ /user/cloudera/averagecomputation/noinmapper /user/cloudera/averagecomputation/noinmapper/input
+
+hadoop fs -put access_log /user/cloudera/averagecomputation/noinmapper/input
+
+hadoop jar hadoop.jar edu.mum.bigdata.part1.averagecomputation.noinmapper.AverageComputation /user/cloudera/averagecomputation/noinmapper/input /user/cloudera/averagecomputation/noinmapper/output
+
+hadoop fs -cat /user/cloudera/averagecomputation/noinmapper/output/part-r-00000
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+
+#AverageComputation Inmapper
+hadoop fs -mkdir /user/cloudera/averagecomputation/inmapper /user/cloudera/averagecomputation/inmapper/input
+
+hadoop fs -put access_log /user/cloudera/averagecomputation/inmapper/input
+
+hadoop jar hadoop.jar edu.mum.bigdata.part1.averagecomputation.inmapper.InMapperAverageComputation /user/cloudera/averagecomputation/inmapper/input /user/cloudera/averagecomputation/inmapper/output
+
+hadoop fs -cat /user/cloudera/averagecomputation/inmapper/output/part-r-00000
+#----------------------------------------------------------------------------------------------------------------------------------------------------
