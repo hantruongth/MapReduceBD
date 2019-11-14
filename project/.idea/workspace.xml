@@ -6,11 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="208e1d38-cc66-4548-ad7b-22e0531b8662" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="208e1d38-cc66-4548-ad7b-22e0531b8662" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -517,18 +513,18 @@
       <option name="presentableId" value="Default" />
       <updated>1573537390927</updated>
       <workItem from="1573537395158" duration="20171000" />
-      <workItem from="1573710149373" duration="706000" />
+      <workItem from="1573710149373" duration="1223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20877000" />
+    <option name="totallyTimeSpent" value="21394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1717" y="36" width="1429" height="853" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49803922" visible="true" weight="0.24585436" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49803922" visible="true" weight="0.24585436" />
       <window_info id="Structure" order="1" sideWeight="0.5019608" side_tool="true" weight="0.24585436" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -546,8 +542,8 @@
       <window_info anchor="bottom" id="Application Servers" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3298292" />
       <window_info anchor="bottom" id="Docker" order="9" weight="0.3298292" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.5003605" side_tool="true" visible="true" weight="0.3298292" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49891853" weight="0.21419185" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50180244" side_tool="true" visible="true" weight="0.21419185" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49819756" visible="true" weight="0.21419185" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
