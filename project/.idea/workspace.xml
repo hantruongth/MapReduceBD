@@ -89,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/mum/bigdata/part1/wordcount/noinmapper/WordCount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+            <state relative-caret-position="624">
+              <caret line="64" column="1" lean-forward="true" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -172,8 +172,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1717" />
-    <option name="y" value="36" />
+    <option name="x" value="37" />
+    <option name="y" value="23" />
     <option name="width" value="1429" />
     <option name="height" value="853" />
   </component>
@@ -189,24 +189,6 @@
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="project_jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
@@ -279,6 +261,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="bigdata" type="462c0819:PsiDirectoryNode" />
               <item name="part4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bigdata" type="462c0819:PsiDirectoryNode" />
+              <item name="part5" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -523,18 +512,17 @@
       <option name="presentableId" value="Default" />
       <updated>1573537390927</updated>
       <workItem from="1573537395158" duration="20171000" />
-      <workItem from="1573710149373" duration="2057000" />
+      <workItem from="1573710149373" duration="2851000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22228000" />
+    <option name="totallyTimeSpent" value="23022000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1717" y="36" width="1429" height="853" extended-state="0" />
-    <editor active="true" />
+    <frame x="37" y="23" width="1429" height="853" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49803922" visible="true" weight="0.24585436" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49803922" visible="true" weight="0.24585436" />
       <window_info id="Structure" order="1" sideWeight="0.5019608" side_tool="true" weight="0.24585436" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -552,7 +540,7 @@
       <window_info anchor="bottom" id="Application Servers" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3298292" />
       <window_info anchor="bottom" id="Docker" order="9" weight="0.3298292" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5025234" side_tool="true" visible="true" weight="0.21419185" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5025234" side_tool="true" weight="0.03942181" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49747658" weight="0.21419185" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -788,8 +776,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/mum/bigdata/part1/wordcount/noinmapper/WordCount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+        <state relative-caret-position="624">
+          <caret line="64" column="1" lean-forward="true" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
         </state>
       </provider>
     </entry>

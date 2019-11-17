@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a302095-ab9e-4bbb-befd-8e8758279989" name="Default Changelist" comment="" />
+    <list default="true" id="3a302095-ab9e-4bbb-befd-8e8758279989" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Document.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Document.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Full Document Steps.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Full Document Steps.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation_Thang Mai_Han Truong.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation_Thang Mai_Han Truong.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$cument.docx" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +42,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -43,15 +51,19 @@
               <item name="MapReduceBD" type="b2602c69:ProjectViewProjectNode" />
               <item name="MapReduceBD" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MapReduceBD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MapReduceBD" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -185,29 +197,24 @@
       <option name="presentableId" value="Default" />
       <updated>1573537031427</updated>
       <workItem from="1573537036116" duration="2006000" />
+      <workItem from="1574005192396" duration="14000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2006000" />
+    <option name="totallyTimeSpent" value="2020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="67" width="1429" height="853" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4116799" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41744772" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" />
-      <window_info anchor="bottom" id="Application Servers" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" visible="true" weight="0.3298292" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="SBT Execute" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -215,40 +222,29 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3298292" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Application Servers" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/part3/StripeRelative.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/part3/MyMapWritable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/part3/StripeRelative.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/part3/MyMapWritable.java" />
   </component>
   <component name="masterDetails">
     <states>
